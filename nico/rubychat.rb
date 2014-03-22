@@ -1,28 +1,28 @@
 require 'socket'
 
 def get_data
-  arr = {}
+  info = {}
 
-  puts 'Ingrese su nombre:'
-  print 'Nombre: '
-  arr['name'] = gets.chomp
+  puts 'Enter your name:'
+  print 'Name: '
+  info['name'] = gets.chomp
 
-  puts 'Ingrese su ip:'
+  puts 'Your IP address:'
   print 'IP: '
   temp = gets.chomp 
-  arr['my_ip'] = temp != '' ? temp : '192.168.1.100'
+  info['my_ip'] = temp != '' ? temp : '192.168.1.3' # Default values...
 
-  puts 'Ingrese el ip del cliente:'
+  puts 'Client IP address:'
   print 'IP: '
   temp = gets.chomp 
-  arr['client_ip'] = temp != '' ? temp : '192.168.1.116'
+  info['client_ip'] = temp != '' ? temp : '192.168.1.4' # Default values...
 
-  puts 'Ingrese puerto de conexion:'
+  puts 'TCP port:'
   print 'Port: '
   temp = gets.chomp 
-  arr['port'] = temp != '' ? temp : '28561'
+  info['port'] = temp != '' ? temp : '7777' # Default values...
 
-  arr
+  info
 end
 
 data = get_data()
